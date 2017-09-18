@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nutrition creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_row(form.illustration) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('nutrition_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

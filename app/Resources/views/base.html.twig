@@ -17,9 +17,14 @@
         <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}" ></script>
     </head>
     <body>
-        <div>
-            <a href="{{ path('fos_user_security_logout')}}">Deconnexion</a>
+             {% if app.user %}
+                <a href="{{ path('fos_user_security_logout')}}">Deconnexion</a>
+                {{ app.user.username }}
+             {% endif %}{
+             
+            }
         {% block body %}{% endblock %}
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
